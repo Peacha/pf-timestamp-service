@@ -1,0 +1,58 @@
+{
+<<<<<<< HEAD
+	"name": "pf-timestamp-microservice",
+	"version": "0.0.1",
+	"description": "FCC API & Microservices projects - build a timestamp microservice",
+	"main": "app.js",
+	"scripts": {
+		"start": "node app.js"
+	},
+	"dependencies": {
+		"body-parser": "^1.19.0",
+		"cors": "^2.8.5",
+		"express": "^4.17.1",
+		"moment": "^2.26.0"
+	},
+	"engines": {
+		"node": ">=10.0.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Peacha/pf-timestamp-service.git"
+	},
+	"keywords": [
+		"node",
+		"express",
+		"freecodecamp",
+		"timestamp"
+	],
+	"license":"MIT"
+=======
+    "name": "pf-timestamp-microservice",
+    "version": "0.0.1",
+    "description": "FCC API & Microservices projects - build a timestamp microservice",
+    "main": "app.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "moment": "^2.26.0"
+    },
+    "engines": {
+        "node": ">=10.0.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Peacha/pf-timestamp-service.git"
+    },
+    "keywords": [
+        "node",
+        "express",
+        "freecodecamp",
+        "timestamp"
+    ]
+>>>>>>> 268aa38557f23b5cf09d76c6fbc62dd1090b1a27
+}
