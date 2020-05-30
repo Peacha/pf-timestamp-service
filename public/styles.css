@@ -1,0 +1,56 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: auto;
+  background-color: #404040;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+body #info-container {
+  color: #404040;
+  background-color: #f0f0f0;
+  margin: 0 auto 0 auto;
+  max-width: 1000px;
+}
+body #info-container h1 {
+  text-align: left;
+  font-size: 3em;
+  margin: 0;
+}
+body #info-container #api-info {
+  text-align: center;
+  margin-top: 20px;
+}
+body #info-container #api-info #main-info {
+  margin: 0 10px 0 10px;
+}
+body #info-container #api-info #main-info p {
+  text-align: left;
+}
+body #info-container #api-info #main-info code {
+  font-size: 0.8em;
+  font-weight: 300;
+  font-family: Monaco, "Courier New";
+  background-color: #d9d9d9;
+  padding: 2px;
+}
+body #info-container #contact p {
+  font-size: 0.8em;
+}
+body #info-container #contact .link-container {
+  font-size: 2em;
+  margin: 5px;
+  transition: all 0.5s ease-in-out;
+}
+body #info-container #contact .link-container i:hover {
+  transform: scale(1.2);
+}
+body #info-container #contact .link-container:visited {
+  text-decoration: none;
+  color: #404040;
+}
+
+/*# sourceMappingURL=styles.css.map */

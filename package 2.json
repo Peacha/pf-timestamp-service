@@ -1,0 +1,26 @@
+{
+	"name":"Timestamp microservice",
+	"version": "0.0.1",
+	"description":"FCC API & Microservices projects - build a timestamp microservice",
+	"main":"app.js",
+	"scripts":{
+		"start" : "node server.js"
+	},
+	"dependencies":{
+
+	},
+	"engines":{
+		"node":">=10.0.0"
+	},
+	"repository":{
+		"type":"git",
+		"url":"https://github.com/Peacha/pf-timestamp-service.git"
+	},
+	"keywords":[
+		"node",
+		"express",
+		"freecodecamp",
+		"timestamp"
+	]
+
+}

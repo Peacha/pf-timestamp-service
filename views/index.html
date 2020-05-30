@@ -1,0 +1,50 @@
+<HTML>
+	<HEAD>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <title>Timestamp Service</title>
+	    <script src="https://kit.fontawesome.com/a8a2a9bcbd.js" crossorigin="anonymous"></script>
+	    <link rel="stylesheet" type="text/css" href="/styles.css">
+	</HEAD>
+	<BODY>
+		<div id="info-container">
+			<h1>Timestamp Service</h1>
+			<hr>
+			<div id="api-info">
+				<p>
+					Welcome, you've arrived the home of a simple timestamping API.
+				</p>
+				<div id="main-info">
+					<h2>API Usage</h2>
+					<p>The timestamping API responds to HTML GET methods, and is accessible. via the following endpoint:</p>
+					<p><code>https://pf-timestamp-service.ts.r.appspot.com/api/timestamp</code></p>
+					<p>The API accepts a date string as a parameter, and returns both UNIX time as well as a UTC string for the parameters provided.</p>
+					<h2>Example Usage</h2>
+					<p>An ISO-8601 format string should be provided to return a valid date.  This means the date format should be provided in YYYY MM DD format as shown:</p>
+					<p><code>https://pf-timestamp-service.ts.r.appspot.com/api/timestamp/1982-08-12</code><p>
+					<p>The above example returns JSON containing both UNIX time and a UTC string for the given date:</p>
+					<p><code>{"unix":397958400000,"utc":"Thu, 12 Aug 1982 00:00:00 GMT"} </code></p>
+					<p>Different escaped date seperators can be provided also:</p>
+					<p><code>https://pf-timestamp-service.ts.r.appspot.com/api/timestamp/1982%2F08%2F12</code><p>
+					<p><code>https://pf-timestamp-service.ts.r.appspot.com/api/timestamp/1982%3A08%3A12</code><p>
+					<p>If you need a time, it can be declared in according to ISO 8601 standards for example:</p>
+					<p><code>https://pf-timestamp-service.ts.r.appspot.com/api/timestamp/2020-05-29T22%3a23%3a33</code><p>
+					<p><code>https://pf-timestamp-service.ts.r.appspot.com/api/timestamp/2020-05-29%2022%3a23%3a33</code><p>
+					<p>We also accept UNIX time as a parameter, returning the same date response:</p>
+					<p><code>https://pf-timestamp-service.ts.r.appspot.com/api/timestamp/1590755013000</code></p>
+					<h2>Invalid date strings</h2>
+					<p>Only EPOCH or ISO 8601 formatted date strings are acceptible to this API.  Should an incorrectly formatted value be presented, an invalid date response will be returned:</p>
+					<p><code>{ "error":"Invalid Date"}</code></p>
+				</div>
+				<div id="contact">
+					<p>Presented by paul.</p>
+					<a href="https://www.freecodecamp.org/pauliefin" class="link-container"><i class="fab fa-free-code-camp"></i></a>
+					<a href="https://codepen.io/peacha" class="link-container"><i class="fab fa-codepen"></i></a>
+					<a href="https://github.com/Peacha" class="link-container"><i class="fab fa-github"></i></a>
+					<a href="https://twitter.com/thepeacha" class="link-container"><i class="fab fa-twitter"></i></a>
+				</div>
+			</div>
+		</div>
+	</BODY>
+</HTML>

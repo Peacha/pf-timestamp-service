@@ -1,18 +1,34 @@
 # API Project: Timestamp Microservice for FCC
 
-### User stories:
+Welcome, you've arrived the home of a simple timestamping API, created as a FreeCodeCamp API & Microservices challenge.
 
-1. The API endpoint is `GET [project_url]/api/timestamp/:date_string?`
-2. A date string is valid if can be successfully parsed by `new Date(date_string)` (JS) . Note that the unix timestamp needs to be an **integer** (not a string) specifying **milliseconds**. In our test we will use date strings compliant with ISO-8601 (e.g. `"2016-11-20"`) because this will ensure an UTC timestamp.
-3. If the date string is **empty** it should be equivalent to trigger `new Date()`, i.e. the service uses the current timestamp.
-4. If the date string is **valid** the api returns a JSON having the structure 
-`{"unix": <date.getTime()>, "utc" : <date.toUTCString()> }`
-e.g. `{"unix": 1479663089000 ,"utc": "Sun, 20 Nov 2016 17:31:29 GMT"}`.
-5. If the date string is **invalid** the api returns a JSON having the structure `{"error" : "Invalid Date" }`.
+### Timestamp API:
 
-#### Example usage:
-* https://curse-arrow.glitch.me/api/timestamp/2015-12-25
-* https://curse-arrow.glitch.me/api/timestamp/1451001600000
+The timestamping API responds to HTML GET methods, and is accessible. via the following endpoint:
+`https://pf-timestamp-service.ts.r.appspot.com/api/timestamp`
 
-#### Example output:
-* {"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}
+The API accepts a date string as a parameter, and returns both UNIX time as well as a UTC string for the parameters provided.
+
+### Example Usage:
+
+An ISO-8601 format string should be provided to return a valid date.  This means the date format should be provided in YYYY MM DD format as shown:
+`https://pf-timestamp-service.ts.r.appspot.com/api/timestamp/1982-08-12`
+
+The above example returns JSON containing both UNIX time and a UTC string for the given date:
+`{"unix":397958400000,"utc":"Thu, 12 Aug 1982 00:00:00 GMT"}`
+
+Different escaped date seperators can be provided also:
+`https://pf-timestamp-service.ts.r.appspot.com/api/timestamp/1982%2F08%2F12`
+`https://pf-timestamp-service.ts.r.appspot.com/api/timestamp/1982%3A08%3A12`
+
+If you need a time, it can be declared in according to ISO 8601 standards for example:
+`https://pf-timestamp-service.ts.r.appspot.com/api/timestamp/2020-05-29T22%3a23%3a33`
+`https://pf-timestamp-service.ts.r.appspot.com/api/timestamp/2020-05-29%2022%3a23%3a33`
+
+We also accept UNIX time as a parameter, returning the same date response:
+`https://pf-timestamp-service.ts.r.appspot.com/api/timestamp/1590755013000`
+
+###Invalid date strings
+
+Only EPOCH or ISO 8601 formatted date strings are acceptible to this API.  Should an incorrectly formatted value be presented, an invalid date response will be returned:
+`{ "error":"Invalid Date"}`
